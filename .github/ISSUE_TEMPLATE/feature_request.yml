@@ -1,0 +1,45 @@
+name: ✨ Feature Template
+description: 새로운 기능을 요청할 때 이 템플릿을 사용하세요.
+title: "[Feature] "
+labels: ["✨ Feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        새로운 기능 요청을 작성해 주셔서 감사합니다! 
+
+  - type: textarea
+    id: text1
+    attributes:
+      label: ⭐️ 기능 구현 설명
+      description: 요청하는 기능에 대한 자세한 설명을 제공하세요.
+      placeholder: 기능에 대한 상세 설명
+    validations:
+      required: true
+
+  - type: textarea
+    id: text2
+    attributes:
+      label: 📋 체크 리스크
+      description: 구현할 기능에 대한 계획을 작성해 주세요.
+      placeholder: 최대 5단계까지 가능합니다. 마일스톤을 잘 생각해 주세요.
+      value: |
+        > - [ ] 🎯
+        > - [ ] 🎯
+        > - [ ] 🎯
+        > - [ ] 🎯
+        > - [ ] 🎯
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Feature 이슈 발행 체크리스트
+        아래의 체크리스트를 확인해 주세요!
+
+        - [x] 유사한 기능이 이미 존재하는지 확인했나요?
+        - [x] 이 기능이 현재의 문제를 해결하는 데 도움이 되나요?
+        - [x] 기능 요청이 프로젝트의 목표와 부합하는지 확인했나요?
+        - [x] 마일스톤 달성을 위한 목표를 잘 설정하셨나요?
+        - [x] 구현은 최대 5단계까지 계획하셨나요?

@@ -1,0 +1,31 @@
+name: 🚩 Review Template
+description: 리뷰를 작성할 때 이 템플릿을 사용하세요.
+title: "[Review] "
+labels: ["🚩 Review"]
+body:
+  - type: textarea
+    id: text1
+    attributes:
+      label: ⭐️ 리뷰 설명
+      description: 어떤 리뷰인지 자세히 설명해 주세요.
+      placeholder: 리뷰 설명
+    validations:
+      required: true
+
+  - type: textarea
+    id: text2
+    attributes:
+      label: 🔺 개선 사항
+      description: 어떤 부분을 개선해야 하는지 목표를 설정해 주세요.
+      placeholder: 개선 사항
+    validations:
+      required: true
+
+  - type: textarea
+    id: text3
+    attributes:
+      label: 📈 코드 리뷰
+      description: 리뷰할 코드를 설명하세요.
+      placeholder: 코드 리뷰
+    validations:
+      required: true
