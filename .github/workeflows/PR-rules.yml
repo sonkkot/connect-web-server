@@ -1,0 +1,30 @@
+name: PR rules
+
+on:
+  pull_request:
+    branches:
+      - prod
+      - dev
+
+jobs:
+  check-prod-pr:
+    if: github.base_ref == 'prod'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for prod
+        run: |
+          if [[ "${{ github.head_ref }}" != "dev" ]]; then
+            echo "prod 브랜치의 PR은 오직 dev 브랜치에서만 가능합니다."
+            exit 1
+          fi
+
+  check-dev-pr:
+    if: github.base_ref == 'dev'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for dev
+        run: |
+          if [[ "${{ github.head_ref }}" != feat* && "${{ github.head_ref }}" != test* ]]; then
+            echo "dev 브랜치의 PR은 오직 feat/xx, test/xx 브랜치에서만 가능합니다."
+            exit 1
+          fi
