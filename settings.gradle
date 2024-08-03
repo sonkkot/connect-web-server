@@ -1,1 +1,2 @@
 rootProject.name = 'copi-web-server'
+include 'copi-core-security'
