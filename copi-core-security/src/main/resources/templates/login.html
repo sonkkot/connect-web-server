@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<h1>Login</h1>
+<button id="kakao-login-button">kakao login</button>
+<button id="google-login-button">google login</button>
+<button id="test-button">auth test</button>
+
+
+<script>
+    document.getElementById('kakao-login-button').onclick = function() {
+        window.location.href = "http://localhost:8080/oauth2/authorization/kakao";
+    };
+
+    document.getElementById('google-login-button').onclick = function() {
+        window.location.href = "http://localhost:8080/oauth2/authorization/google";
+    };
+
+        document.getElementById('test-button').onclick = function() {
+
+            fetch('/test/auth', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+                }
+            })
+            .then(res => console.log(res));
+
+        };
+
+</script>
+</body>
+</html>
