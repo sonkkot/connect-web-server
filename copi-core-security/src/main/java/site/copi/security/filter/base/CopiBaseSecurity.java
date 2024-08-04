@@ -31,8 +31,7 @@ public class CopiBaseSecurity extends AbstractHttpConfigurer<CopiBaseSecurity, H
                 .cors(cors -> cors.configurationSource(copiCorsSecurity.corsConfigurationSource()))
                 .exceptionHandling(exceptionHandlingCustomizer -> exceptionHandlingCustomizer
                     .accessDeniedHandler(copiBaseAccessDeniedHandler)
-                    .authenticationEntryPoint(copiBaseAuthenticationEntryPoint))
-            ;
+                    .authenticationEntryPoint(copiBaseAuthenticationEntryPoint));
         }
     }
 

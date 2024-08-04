@@ -1,7 +1,7 @@
-package site.copi.security.filter.domain;
+package site.copi.security.filter;
 
 public interface CopiApiFilterProvider {
-    String targetApi();
+    String[] targetApi();
 
     String[] allowList();
 

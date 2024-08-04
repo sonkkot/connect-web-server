@@ -1,0 +1,11 @@
+spring:
+  config:
+    import:
+      - classpath:secret/jwt/jwt-config.yml
+      - classpath:secret/oauth2/oauth2-config.yml
+
+logging:
+  level:
+    org.springframework.security: TRACE
+    org.hibernate.SQL: DEBUG  # Hibernate를 통한 SQL 문을 DEBUG 레벨로 로깅합니다.
+    org.hibernate.type: TRACE # SQL 쿼리의 매개변수 값을 로깅합니다.

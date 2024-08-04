@@ -14,7 +14,8 @@ public class CopiCorsSecurity {
     private final List<String> allowedOrigin = List.of("*");
     private final List<String> allowedHeader = List.of("*");
     private final List<String> allowedMethods = List.of(
-        GET.name(), POST.name(), PUT.name(), PATCH.name(), DELETE.name(),
+        GET.name(), POST.name(),
+        PUT.name(), PATCH.name(), DELETE.name(),
         OPTIONS.name(), HEAD.name(), "UPGRADE"
     );
     private final List<String> exposedHeader = List.of("Set-Cookie", "Authorization");

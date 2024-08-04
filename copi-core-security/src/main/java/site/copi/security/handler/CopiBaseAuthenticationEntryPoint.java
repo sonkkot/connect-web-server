@@ -19,6 +19,6 @@ public class CopiBaseAuthenticationEntryPoint implements AuthenticationEntryPoin
         HttpServletRequest request,
         HttpServletResponse response,
         AuthenticationException authException) {
-
+        System.out.println("CopiBaseAuthenticationEntryPoint.commence");
     }
 }

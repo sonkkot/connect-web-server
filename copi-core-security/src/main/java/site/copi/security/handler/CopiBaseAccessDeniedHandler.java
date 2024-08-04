@@ -19,6 +19,6 @@ public class CopiBaseAccessDeniedHandler implements AccessDeniedHandler {
         HttpServletRequest request,
         HttpServletResponse response,
         AccessDeniedException accessDeniedException) {
-
+        System.out.println("CopiBaseAccessDeniedHandler.handle");
     }
 }
