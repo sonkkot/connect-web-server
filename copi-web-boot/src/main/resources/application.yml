@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: copi-web-server
+  config:
+    import:
+      - classpath:/application-security.yml
