@@ -1,0 +1,3 @@
+dependencies {
+    implementation project(':copi-project:copi-project-framework')
+}

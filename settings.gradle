@@ -1,2 +1,9 @@
 rootProject.name = 'copi-web-server'
 include 'copi-core-security'
+include 'copi-web-boot'
+
+include 'copi-project'
+include 'copi-project:copi-project-domain'
+include 'copi-project:copi-project-application'
+include 'copi-project:copi-project-framework'
+
