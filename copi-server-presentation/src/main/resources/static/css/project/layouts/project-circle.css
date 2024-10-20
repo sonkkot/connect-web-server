@@ -1,0 +1,127 @@
+.project-circle {
+  border: 1px solid #000;
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border-radius: 300px;
+  margin: 100px auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-circle-component-list {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+
+.project-circle-component-child { 
+  border: 1px dashed #bd7612;
+  width: 150px;
+  height: 150px;
+
+  border-radius: 75px;
+
+  position: absolute;
+
+  animation: component-rotate 15s linear infinite;
+  animation-play-state: running;
+}
+
+/* .project-circle-component-child:hover,
+.project-circle-component-child:hover .project-circle-component-text-rotate {
+  animation-play-state: paused;
+  scale: 1.2;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  border: 1px solid orange;
+} */
+
+.project-circle-component-child:nth-child(1) {
+  top: -60px;
+  left: 210px;
+
+  transform-origin: 75px 375px;
+}
+
+.project-circle-component-child:nth-child(2) {  
+  top: 225px;
+  right: -75px;
+  
+  transform-origin: -235px 75px;
+}
+
+.project-circle-component-child:nth-child(3) {
+  bottom: -85px;
+  left: 220px;
+
+  transform-origin: 75px -235px;
+}
+
+.project-circle-component-child:nth-child(4) {
+  top: 225px;
+  left: -75px;
+
+  transform-origin: 375px 75px;
+}
+
+.project-circle-component-text-rotate {
+  position: absolute;
+  transform-origin: 75px 75px;
+  
+  animation: text-rotate 15s linear infinite;
+  animation-play-state: running;
+}
+
+@keyframes component-rotate {
+  to { transform: rotate(1turn);}
+}
+
+@keyframes text-rotate {
+  to { transform: rotate(-1turn);}
+}
+
+/* article section */
+
+.project-circle-information {
+  border: 1px solid #000;
+  width: 400px;
+  height: 600px;
+  margin: 0px 0px 200px 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+
+}
+
+.project-circle-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.project-circle-category {
+  border: 1px solid #000;
+}
+
+.project-circle-count {
+  border: 1px solid #000;
+}
+
+.project-circle-ii {
+  border: 1px solid #000;
+}
+
+.project-circle-go {
+  border: 1px solid #000;
+}
+
+.project-circle-start {
+  border: 1px solid #000;
+}
