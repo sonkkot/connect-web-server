@@ -1,0 +1,53 @@
+.project-circle-item-vacancy {
+  border-radius: 15px;
+
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  flex-direction: column;
+
+  /* border: 1px solid #000; */
+}
+
+.project-circle-item-vacancy-userprofile {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+
+  margin: 5px;
+
+  border: 1px dashed #000;
+}
+
+.project-circle-item-vacancy-user-information {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+
+  flex-direction: row;
+}
+
+.project-circle-item-vacancy-position {
+  width: 2rem;
+  height: 2rem;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+}
+
+.project-circle-item-vacancy-username {
+  min-width: 30px;
+  width: 50px;
+  margin: 5px;
+  font-weight: bold;
+  /* border: 1px solid #000; */
+}
