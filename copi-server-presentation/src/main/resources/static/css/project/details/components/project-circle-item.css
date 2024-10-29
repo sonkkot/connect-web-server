@@ -1,4 +1,6 @@
-.project-circle-item-vacancy {
+@import url("/css/reset-css.css");
+
+.project-circle-item {
   border-radius: 15px;
 
   width: 150px;
@@ -14,19 +16,21 @@
   /* border: 1px solid #000; */
 }
 
-.project-circle-item-vacancy-userprofile {
+.project-circle-item-userprofile {
   width: 80px;
   height: 80px;
   border-radius: 15px;
+  
+  background-image: url("../../../../images/sample/sample-user.jpg");
+  background-size: cover;
+  background-position: center;
 
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 
   margin: 5px;
-
-  border: 1px dashed #000;
 }
 
-.project-circle-item-vacancy-user-information {
+.project-circle-item-user-information {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -35,7 +39,7 @@
   flex-direction: row;
 }
 
-.project-circle-item-vacancy-position {
+.project-circle-item-position {
   width: 2rem;
   height: 2rem;
 
@@ -44,10 +48,7 @@
   border-radius: 10px;
 }
 
-.project-circle-item-vacancy-username {
-  min-width: 30px;
-  width: 50px;
+.project-circle-item-username {
   margin: 5px;
   font-weight: bold;
-  /* border: 1px solid #000; */
 }
