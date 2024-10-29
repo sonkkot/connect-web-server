@@ -1,3 +1,5 @@
+<script src="https://kit.fontawesome.com/9a0d11d8cb.js" crossorigin="anonymous"></script>
+
 <link rel="stylesheet" href="../../static/css/reset-css.css" th:href="@{/css/reset-css.css}">
 <link rel="stylesheet" href="../../static/css/fragments/header.css" th:href="@{/css/fragments/header.css}">
 
@@ -5,10 +7,19 @@
   <h1 class="header-title title-grid">CoPi</h1>
   <nav class="header-nav nav-grid nav-container">
     <ul class="ul-container">
-      <li class="header-project">프로젝트</li>
-      <li class="header-study">스터디</li>
-      <li class="header-community">커뮤니티</li>
-      <li class="header-login">로그인</li>
+      <li class="header-project">
+        <h2 class="nav-title">프로젝트</h2>
+        <p class="nav-down"><i class="fa-solid fa-chevron-down"></i></p>
+      </li>
+
+      <li class="header-project">
+        <h2 class="nav-title">스터디</h2>
+        <p class="nav-down"><i class="fa-solid fa-chevron-down"></i></p>
+      </li>
     </ul>
   </nav>
+
+  <aside class="header-aside">
+    <a href="#" class="login-button">로그인</a>
+  </aside>
 </header>
