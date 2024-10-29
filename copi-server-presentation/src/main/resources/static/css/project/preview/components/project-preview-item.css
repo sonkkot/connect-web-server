@@ -1,0 +1,212 @@
+.project-preview-main {
+  margin: 10px;
+}
+
+.project-preview-item-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-preview-item-li {
+  border: 1px solid #000;
+  border-radius: 20px;
+  width: 960px;
+  height: 70px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 10px;
+  margin: 5px;
+
+  /* transition: transform 0.3s ease; */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-preview-item-li:hover {
+  cursor: pointer;
+
+  transform: scale(1.01);
+  background-color: rgb(245, 245, 245);
+}
+
+.project-preview-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  /* border: 1px solid #000; */
+}
+
+.project-preview-item-category {
+  font-size: 0.8rem;
+  
+  background: linear-gradient(360deg, #b382b2 35%,  #4776e6 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  font-weight: bold;
+}
+
+.project-preview-item-title {
+  font-size: 1rem;
+  margin: 5px 5px 5px 0px;
+}
+
+.project-preview-item-stack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  text-align: center;
+}
+
+.project-preview-item-tags {  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0px 20px 0px 0px;
+}
+
+.project-preview-item-tag-item {
+  border: 1px solid #000;
+
+  margin: 5px 5px 5px 0px;
+
+  width: 70px;
+  height: 25px;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.project-preview-item-languages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-preview-item-language-item {
+  border: 1px solid #000;
+  margin: 5px;
+
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 그림자 효과 추가 */
+  box-shadow: 
+    4px 4px 8px rgba(0, 0, 0, 0.5), /* 바닥 쪽의 그림자 */
+    -2px -2px 5px rgba(255, 255, 255, 0.7); /* 위쪽의 하이라이트 */
+
+  /* 테두리도 입체적으로 보이게 약간의 내부 그림자 */
+  border-top: 1px solid rgba(255, 255, 255, 0.7); /* 윗부분의 밝은 경계 */
+  border-left: 1px solid rgba(255, 255, 255, 0.7); /* 왼쪽의 밝은 경계 */
+  border-right: 1px solid rgba(0, 0, 0, 0.15); /* 오른쪽의 어두운 경계 */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* 아래쪽의 어두운 경계 */
+}
+
+.project-preview-item-language {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* project-preview-item-stat */
+.project-preview-item-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: right;
+
+  margin: 0px 0px 0px 90px;
+}
+
+.project-preview-item-favorites {
+  border: 1px solid #000;
+  width: 120px;
+  height: 20px;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-preview-item-favorites:hover {
+  background: linear-gradient(140deg, #3a7bd5, #00d2ff);
+  color: #ffffff; /* 텍스트 색상 */
+}
+
+.project-preview-item-party {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.project-preview-item-party li {
+  margin: 3px;
+
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+  background-image: url("../../../../images/sample/sample-user.jpg");
+  background-size: cover;
+  background-position: center;
+
+  /* 그림자 효과 추가 */
+  box-shadow: 
+  4px 4px 8px rgba(0, 0, 0, 0.5), /* 바닥 쪽의 그림자 */
+  -2px -2px 5px rgba(255, 255, 255, 0.7); /* 위쪽의 하이라이트 */
+
+  /* 테두리도 입체적으로 보이게 약간의 내부 그림자 */
+  border-top: 1px solid rgba(255, 255, 255, 0.7); /* 윗부분의 밝은 경계 */
+  border-left: 1px solid rgba(255, 255, 255, 0.7); /* 왼쪽의 밝은 경계 */
+  border-right: 1px solid rgba(0, 0, 0, 0.15); /* 오른쪽의 어두운 경계 */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* 아래쪽의 어두운 경계 */
+}
+
+.project-preview-item-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin: 5px 0px 0px 0px;
+  font-size: 0.8rem;
+}
+
+.project-preview-item-count {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.project-preview-item-created-at {
+  margin: 0px 10px 0px 0px;
+}
+
+.project-preview-item-count li {
+  margin: 5px;
+}
