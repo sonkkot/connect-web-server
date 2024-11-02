@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoPi</title>
+
+  <!-- <link rel="stylesheet" th:href="@{/css/reset-css.css}"> -->
+  <link rel="stylesheet" th:href="@{/css/reset-css-v2.css}">
+  <link rel="stylesheet" th:href="@{/css/fragments/header.css}">
+  <link rel="stylesheet" th:href="@{/css/fragments/footer.css}">
+
+  <link rel="stylesheet" th:href="@{/css/project/write/components/project-write-ckeidtor.css}">
+
+  <script src="https://kit.fontawesome.com/9a0d11d8cb.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/translations/ko.js"></script>
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-write-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 30px auto;
+
+      width: 960px;
+    }
+
+  </style>
+
+</head>
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+
+<main class="project-write-main">
+  <article th:replace="~{project/write/components/project-write-ckeditor :: article}"></article>
+</main>
+
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+
+<script th:src="@{/js/project/write/components/project-write-ckeditor.js}"></script>
+</body>
+</html>
