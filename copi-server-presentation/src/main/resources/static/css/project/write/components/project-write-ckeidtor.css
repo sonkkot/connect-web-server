@@ -1,0 +1,117 @@
+.project-write-ckeditor-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px auto;
+}
+
+.project-write-ckeditor-box {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.ck.ck-editor {
+  min-width: 100%;
+}
+
+.ck-editor__editable {
+  height: 700px;
+}
+
+.project-write-ckeditor-title{
+  width: 100%;
+  height: 50px;
+  font-size: 1.15rem;
+
+  border: 1px solid #ccced1;
+  box-sizing: border-box;
+}
+
+.ck-content {
+  padding: 5px;
+}
+
+.proejct-write-button {
+  border: 1px solid #000;
+
+  margin: 10px 0px 10px 0px;
+  width: 50px;
+  height: 30px;
+
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  
+}
+
+.proejct-write-button:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+
+/* ---------------------- */
+
+.project-stack-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin: 30px auto;
+}
+
+.project-stack-list {
+  border: 1px solid #ccced1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+  padding: 25px;
+}
+
+.project-stack {
+  border: 1px solid #000;
+  margin: 7px;
+
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 그림자 효과 추가 */
+  box-shadow: 
+  4px 4px 8px rgba(0, 0, 0, 0.5), /* 바닥 쪽의 그림자 */
+  -2px -2px 5px rgba(255, 255, 255, 0.7); /* 위쪽의 하이라이트 */
+
+  /* 테두리도 입체적으로 보이게 약간의 내부 그림자 */
+  border-top: 1px solid rgba(255, 255, 255, 0.7); /* 윗부분의 밝은 경계 */
+  border-left: 1px solid rgba(255, 255, 255, 0.7); /* 왼쪽의 밝은 경계 */
+  border-right: 1px solid rgba(0, 0, 0, 0.15); /* 오른쪽의 어두운 경계 */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* 아래쪽의 어두운 경계 */
+}
+
+.project-stack:hover {
+  cursor: pointer;
+  scale: 1.5;
+}
+
+.project-stack-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.project-write-ckeidtor-content {
+  border: 1px solid #000;
+  width: 100%;
+}
