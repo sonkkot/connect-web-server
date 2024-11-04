@@ -16,7 +16,7 @@
   align-items: center;
 
   flex-wrap: wrap;
-  width: 500px;
+  width: 100%;
   padding: 30px;
 }
 
@@ -41,14 +41,45 @@
   border-left: 1px solid rgba(255, 255, 255, 0.7); /* 왼쪽의 밝은 경계 */
   border-right: 1px solid rgba(0, 0, 0, 0.15); /* 오른쪽의 어두운 경계 */
   border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* 아래쪽의 어두운 경계 */
+
+  transition: transform 0.2s ease;
+
+  position: relative;
 }
 
 .project-stack:hover {
   cursor: pointer;
-  scale: 1.5;
+  /* scale: 1.5; */
+  transform: scale(1.5);
+}
+
+.project-stack:hover .project-stack-title { 
+  display: block;
+}
+
+.project-stack:active {
+  transform: scale(2.0);
 }
 
 .project-stack-logo {
   width: 30px;
   height: 30px;
+}
+
+.project-stack-title {
+  border: 1px solid #333;
+  background-color: #ffffff;
+  position: absolute;
+  top: -30px;
+  left: 5px;
+  padding: 5px;
+  border-radius: 5px;
+
+  display: none;
+  white-space: nowrap;
+
+	margin: 0;
+	font-size: 1rem;
+  font-weight: normal;
+	vertical-align: baseline;
 }
