@@ -18,6 +18,8 @@
 
 .project-write-input-title {
   color: #ccced1;
+
+  width: 100%;
 }
 
 .ck.ck-editor {
@@ -39,6 +41,8 @@
 
 .project-write-input-content {
   color: #ccced1;
+  
+  width: 100%;
 }
 
 .ck-content {
