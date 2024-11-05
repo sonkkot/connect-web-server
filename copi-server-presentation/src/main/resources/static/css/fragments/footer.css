@@ -9,6 +9,8 @@ footer.grid-footer {
   width: 100%;
   height: 200px;
   color: #fff;
+
+  margin: 0px;
 }
 
 footer.grid-footer section.info {      
