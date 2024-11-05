@@ -3,12 +3,13 @@
   height: 100%;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .project-stack-list {
-  border: 1px solid #000;
+  border: 1px solid #ccced1;
   border-radius: 50px;
   display: flex;
   flex-direction: row;
@@ -17,7 +18,8 @@
 
   flex-wrap: wrap;
   width: 100%;
-  padding: 30px;
+  padding: 30px 0px;
+  margin: 0px;
 }
 
 .project-stack {
@@ -49,8 +51,7 @@
 
 .project-stack:hover {
   cursor: pointer;
-  /* scale: 1.5; */
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 
 .project-stack:hover .project-stack-title { 
@@ -67,19 +68,23 @@
 }
 
 .project-stack-title {
-  border: 1px solid #333;
+  border-bottom: 1px solid #c9c9c9;
   background-color: #ffffff;
   position: absolute;
-  top: -30px;
-  left: 5px;
+
   padding: 5px;
   border-radius: 5px;
+  transform: translate(0%, -120%);
 
   display: none;
   white-space: nowrap;
 
 	margin: 0;
-	font-size: 1rem;
+	font-size: 0.7rem;
   font-weight: normal;
 	vertical-align: baseline;
+}
+
+.project-stack-list-title {
+  color: #c9c9c9;
 }
