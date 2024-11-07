@@ -46,6 +46,18 @@
   flex-shrink: 0;
 
   border-radius: 10px;
+
+
+  /* 그림자 효과 추가 */
+  box-shadow: 
+  4px 4px 8px rgba(0, 0, 0, 0.5), /* 바닥 쪽의 그림자 */
+  -2px -2px 5px rgba(255, 255, 255, 0.7); /* 위쪽의 하이라이트 */
+
+  /* 테두리도 입체적으로 보이게 약간의 내부 그림자 */
+  border-top: 1px solid rgba(255, 255, 255, 0.7); /* 윗부분의 밝은 경계 */
+  border-left: 1px solid rgba(255, 255, 255, 0.7); /* 왼쪽의 밝은 경계 */
+  border-right: 1px solid rgba(0, 0, 0, 0.15); /* 오른쪽의 어두운 경계 */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* 아래쪽의 어두운 경계 */
 }
 
 .project-circle-item-username {
