@@ -1,0 +1,65 @@
+@import url("/css/reset-css.css");
+
+.project-circle-item-vacancy {
+  border-radius: 15px;
+
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  flex-direction: column;
+}
+
+.project-circle-item-vacancy-userprofile {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+
+  margin: 5px;
+
+  border: 1px dashed #000;
+  background-color: #fff;
+}
+
+.project-circle-item-vacancy-user-information {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+
+  flex-direction: row;
+}
+
+.project-circle-item-vacancy-position {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  /* 그림자 효과 추가 */
+  box-shadow: 
+  4px 4px 8px rgba(0, 0, 0, 0.5), /* 바닥 쪽의 그림자 */
+  -2px -2px 5px rgba(255, 255, 255, 0.7); /* 위쪽의 하이라이트 */
+
+  /* 테두리도 입체적으로 보이게 약간의 내부 그림자 */
+  border-top: 1px solid rgba(255, 255, 255, 0.7); /* 윗부분의 밝은 경계 */
+  border-left: 1px solid rgba(255, 255, 255, 0.7); /* 왼쪽의 밝은 경계 */
+  border-right: 1px solid rgba(0, 0, 0, 0.15); /* 오른쪽의 어두운 경계 */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* 아래쪽의 어두운 경계 */
+}
+
+.project-circle-item-vacancy-username {
+  min-width: 30px;
+  width: 50px;
+  margin: 5px;
+  font-weight: bold;
+  /* border: 1px solid #000; */
+}

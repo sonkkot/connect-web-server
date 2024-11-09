@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoPi</title>
+
+  <link rel="stylesheet" th:href="@{/css/reset-css.css}">
+  <link rel="stylesheet" th:href="@{/css/fragments/header.css}">  
+  <link rel="stylesheet" th:href="@{/css/fragments/footer.css}">
+  
+  <link rel="stylesheet" th:href="@{/css/project/details/layouts/project-circle.css}">
+  
+  <link rel="stylesheet" th:href="@{/css/project/details/components/project-circle-item.css}">
+  <link rel="stylesheet" th:href="@{/css/project/details/components/project-circle-item-vacancy.css}">
+
+  <link rel="stylesheet" th:href="@{/css/project/details/layouts/project-content.css}">
+  
+  <script src="https://kit.fontawesome.com/9a0d11d8cb.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-details-content {
+      margin: 30px 80px 30px 80px;
+    }
+  </style>
+
+</head>
+<body>
+  <header th:replace="~{fragments/header :: header}"></header>
+  
+  <main>
+    <main th:replace="~{project/details/layouts/project-circle :: main}"></main>
+    <section th:replace="~{project/details/layouts/project-content :: section}"></section>
+  </main>
+
+  <footer th:replace="~{fragments/footer :: footer}"></footer>
+</body>
+</html>

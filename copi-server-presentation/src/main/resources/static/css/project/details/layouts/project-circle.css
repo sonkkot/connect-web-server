@@ -1,0 +1,213 @@
+@import url("/css/reset-css.css");
+
+.project-circle {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border-radius: 300px;
+  margin: 100px auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 
+  0px 0px 15px rgba(0, 0, 0, 0.5),
+  inset 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.project-circle-component-list {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+
+.project-circle-component-child { 
+  /* border: 1px dashed #000000; */
+  width: 150px;
+  height: 150px;
+
+  border-radius: 75px;
+
+  position: absolute;
+
+  animation: component-rotate 15s linear infinite;
+  animation-play-state: running;
+}
+
+.project-circle-component-child:nth-child(1) {
+  top: -70px;
+  left: 210px;
+
+  transform-origin: 90px 390px;
+}
+
+.project-circle-component-child:nth-child(2) {  
+  top: 225px;
+  right: -90px;
+  
+  transform-origin: -235px 90px;
+}
+
+.project-circle-component-child:nth-child(3) {
+  bottom: -110px;
+  left: 220px;
+
+  transform-origin: 90px -235px;
+}
+
+.project-circle-component-child:nth-child(4) {
+  top: 225px;
+  left: -90px;
+
+  transform-origin: 390px 90px;
+}
+
+.project-circle-component-text-rotate {
+  position: absolute;
+  transform-origin: 75px 75px;
+  
+  animation: text-rotate 15s linear infinite;
+  animation-play-state: running;
+}
+
+@keyframes component-rotate {
+  to { transform: rotate(1turn);}
+}
+
+@keyframes text-rotate {
+  to { transform: rotate(-1turn);}
+}
+
+/* article section */
+
+.project-circle-information {
+  width: 450px;
+  height: 600px;
+  margin: 0px 0px 150px 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  /* border: 1px solid #000; */
+}
+
+.project-circle-hedaer {
+  /* border: 1px solid #000; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  width: 100%;
+}
+
+.project-circle-category {
+  font-size: 1.2rem;
+  font-weight: bold;
+  
+  background: linear-gradient(360deg, #b382b2 35%,  #4776e6 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  margin: 8px 350px 8px 0px;
+}
+
+.project-circle-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.project-circle-main {
+  /* border: 1px solid #000; */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 50px;
+
+  margin: 10px 0px 10px 0px;
+}
+
+.project-circle-main-ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.project-circle-main-stack {
+  border: 1px solid #000;
+  margin: 7px;
+
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 그림자 효과 추가 */
+  box-shadow: 
+  4px 4px 8px rgba(0, 0, 0, 0.5), /* 바닥 쪽의 그림자 */
+  -2px -2px 5px rgba(255, 255, 255, 0.7); /* 위쪽의 하이라이트 */
+
+  /* 테두리도 입체적으로 보이게 약간의 내부 그림자 */
+  border-top: 1px solid rgba(255, 255, 255, 0.7); /* 윗부분의 밝은 경계 */
+  border-left: 1px solid rgba(255, 255, 255, 0.7); /* 왼쪽의 밝은 경계 */
+  border-right: 1px solid rgba(0, 0, 0, 0.15); /* 오른쪽의 어두운 경계 */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* 아래쪽의 어두운 경계 */
+}
+
+.project-circle-main-position {
+  width: 30px;
+  height: 30px;
+}
+
+.project-circle-footer {
+  width: 100%;
+}
+
+.project-circle-join {
+  margin: 5px;
+
+  color: #333;
+  width: 150px;
+  height: 40px;
+
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+
+  background-color: #ffffff;
+
+  /* 그림자 효과 추가 */
+  box-shadow: 
+    4px 4px 8px rgba(0, 0, 0, 0.5), /* 바닥 쪽의 그림자 */
+    -2px -2px 5px rgba(255, 255, 255, 0.7); /* 위쪽의 하이라이트 */
+
+  /* 테두리도 입체적으로 보이게 약간의 내부 그림자 */
+  border-top: 1px solid rgba(255, 255, 255, 0.7); /* 윗부분의 밝은 경계 */
+  border-left: 1px solid rgba(255, 255, 255, 0.7); /* 왼쪽의 밝은 경계 */
+  border-right: 1px solid rgba(0, 0, 0, 0.15); /* 오른쪽의 어두운 경계 */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* 아래쪽의 어두운 경계 */
+
+  transition: transform 0.5s ease;
+}
+
+.project-circle-join:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

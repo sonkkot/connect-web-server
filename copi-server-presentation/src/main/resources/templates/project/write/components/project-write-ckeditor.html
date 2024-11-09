@@ -1,0 +1,19 @@
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/translations/ko.js"></script>
+
+<link rel="stylesheet" href="../../../../static/css/project/write/components/project-write-ckeidtor.css">
+
+<article class="project-write-ckeditor-container">
+  <article class="project-write-ckeditor-box">
+      <h2 class="project-write-input-title">프로젝트 성공을 위한 최고의 팀원을 구해보세요!</h2>
+      <input class="project-write-ckeditor-title" name="title" type="text" placeholder="제목을 입력해주세요."/>
+
+      <div th:replace="~{project/write/components/project-stack-list :: div}" class="project-stack-container"></div>
+      
+      <h2 class="project-write-input-content">자세한 정보를 알려주세요.</h2>
+      <textarea name="content" id="project-write-ckeidtor-content" class="project-write-ckeidtor-content" placeholder="내용을 입력해주세요."></textarea>
+      <button class="proejct-write-button">등록</button>
+  </article>
+</article>
+
+<script src="../../../../static/js/project/write/components/project-write-ckeditor.js"></script>

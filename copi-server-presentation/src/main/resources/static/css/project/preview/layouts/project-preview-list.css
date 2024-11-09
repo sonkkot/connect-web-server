@@ -1,0 +1,23 @@
+.project-preview-main {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 30px auto;
+}
+
+.project-preview-item-li {
+  /* border: 1px solid #000; */
+  width: 1280px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+iframe{
+  width: inherit;
+  height: inherit;
+}

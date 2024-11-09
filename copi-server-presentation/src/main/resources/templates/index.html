@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoPi</title>
+  <link rel="stylesheet" href="../../static/css/reset-css.css" th:href="@{/css/reset-css.css}">
+
+  <link rel="stylesheet" th:href="@{/css/fragments/header.css}">
+  <link rel="stylesheet" th:href="@{/css/fragments/footer.css}">
+  
+  <link rel="stylesheet" href="../../../static/css/home/layouts/home-main.css" th:href="@{/css/home/layouts/home-main.css}">
+
+  <script src="https://kit.fontawesome.com/9a0d11d8cb.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      background-color: #282c31;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "content-grid"
+        "footer-grid";
+    }
+
+    body section.content-grid {
+      grid-area: content-grid;
+
+      display: grid;
+      grid-template-columns: 1fr; 
+      grid-template-rows: 100px minmax(800px, auto);
+      grid-template-areas: 
+        "grid-header"
+        "grid-main";
+
+      min-width: 960px;
+      margin: 0 auto;
+    }
+  </style>
+
+</head>
+<body>
+  <section class="content-grid">
+    <header th:replace="~{fragments/header :: header}"></header>
+    <main th:replace="~{home/layouts/home-main :: main}"></main>
+  </section>
+  <footer th:replace="~{fragments/footer :: footer}"></footer>
+</body>
+</html>

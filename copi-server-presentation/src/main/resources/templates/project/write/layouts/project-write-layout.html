@@ -1,0 +1,34 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="../../../../static/css/reset-css.css">
+<link rel="stylesheet" href="../../../../static/css/project/write/components/project-stack-list.css" th:href="@{/css/project/write/components/project-stack-list.css}">
+<link rel="stylesheet" href="../../../../static/css/project/write/components/project-write-ckeidtor.css">
+<link rel="stylesheet" href="../../../../static/css/project/write/layouts/project-write-layout.css">
+
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/translations/ko.js"></script>
+
+<article class="project-write-layout-container">
+  <article class="">
+    <!--  -->
+
+    <div th:replace="~{project/write/components/project-stack-list :: div}" class="project-stack-container"></div>
+
+    <!--  -->
+
+    <form class="hi" action="/save" method="POST">
+      <input class="title" name="title" type="text" placeholder="제목"/><br>
+    
+      <!--  -->
+    
+    
+      <!--  -->
+    
+      <textarea name="content" id="project-write"></textarea><br>
+      <input type="submit" value="등록">
+    </form>
+  </article>
+</box>
+<script>
+  ClassicEditor.create(document.querySelector( '#project-write' ), {language: "ko"});
+</script>
+</html>

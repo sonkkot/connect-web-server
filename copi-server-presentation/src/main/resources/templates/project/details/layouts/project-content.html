@@ -1,0 +1,8 @@
+<!-- <link rel="stylesheet" th:href="@{/css/reset-css.css}" href="../../../static/css/reset-css.css"> -->
+<link rel="stylesheet" th:href="@{/css/project/layouts/project-content.css}" href="../../../../static/css/project/details/layouts/project-content.css">
+  
+<section class="project-content-section project-details-content">
+  <article class="project-content-article">
+    <p th:utext="${@markdownService.convert(markdownGo)}"></p>
+  </article>
+</section>

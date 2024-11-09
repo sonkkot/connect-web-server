@@ -1,0 +1,80 @@
+.project-preview-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* hproject-preivew-header-box */
+
+.project-preivew-header-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin: 0px 500px 0px 0px;
+}
+
+.project-preivew-count {
+  border: 2px solid #000;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+
+  margin: 10px 10px 10px 500px;
+}
+
+.project-preivew-title {
+  font-weight: bold;
+  font-size: 7rem;
+}
+
+/* project-preivew-order */
+
+.project-preivew-order {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.project-preivew-order-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.project-preivew-order-list > * {
+  border: 1px solid #000;
+  margin: 10px;
+  width: 150px;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+}
+
+.project-preivew-order-item:hover {
+  cursor: pointer;
+  background-color: #f1f1f1;
+}

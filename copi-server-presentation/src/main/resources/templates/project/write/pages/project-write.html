@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoPi</title>
+
+  <link rel="stylesheet" th:href="@{/css/reset-css-v2.css}">
+  <link rel="stylesheet" th:href="@{/css/fragments/header.css}">
+  <link rel="stylesheet" th:href="@{/css/fragments/footer.css}">
+
+  <link rel="stylesheet" th:href="@{/css/project/write/components/project-write-ckeidtor.css}">
+  <link rel="stylesheet" th:href="@{/css/project/write/components/project-stack-list.css}">
+
+  <script src="https://kit.fontawesome.com/9a0d11d8cb.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/translations/ko.js"></script>
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-write-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 960px;
+    }
+
+    
+    h2 {
+      display: block;
+      font-size: 1.5em;
+      margin-block-start: 0.83em;
+      margin-block-end: 0.83em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+      unicode-bidi: isolate;
+    }
+
+    h3 {
+      display: block;
+      font-size: 1.17em;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+      unicode-bidi: isolate;
+    }
+
+    h4 {
+      display: block;
+      margin-block-start: 1.33em;
+      margin-block-end: 1.33em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+      unicode-bidi: isolate;
+    }
+
+    li {
+      display: list-item;
+      text-align: -webkit-match-parent;
+      unicode-bidi: isolate;
+      padding: auto;
+    }
+
+    .ck-content ul {
+      list-style-type: disc;
+    }
+
+    ul {
+      display: block;
+      list-style-type: disc;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 40px;
+      unicode-bidi: isolate;
+    }
+
+    ol {
+      display: block;
+      list-style-type: decimal;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 40px;
+      unicode-bidi: isolate;
+    }
+  </style>
+
+</head>
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+
+<main class="project-write-main">
+  <article th:replace="~{project/write/components/project-write-ckeditor :: article}"></article>
+</main>
+
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+
+<script th:src="@{/js/project/write/components/project-write-ckeditor.js}"></script>
+</body>
+</html>
