@@ -1,5 +1,6 @@
 package site.copi.project.domain.aggregate;
 
+import lombok.Builder;
 import lombok.Getter;
 import site.copi.project.domain.value.*;
 
@@ -19,6 +20,7 @@ public class ProjectAggregate {
     private ProjectViewCount projectViewCount;
     private ProjectLikeCount projectLikeCount;
 
+    @Builder
     public ProjectAggregate(ProjectId projectId, ProjectWriter projectWriter, ProjectStackList projectStackList, ProjectTitle projectTitle, ProjectContent projectContent, ProjectViewCount projectViewCount, ProjectLikeCount projectLikeCount) {
         this.projectId = projectId;
         this.projectStackList = projectStackList;
@@ -47,5 +49,9 @@ public class ProjectAggregate {
 
     public void update(final ProjectTitle projectTitle) {
         this.projectTitle = requiredNotNull(projectTitle);
+    }
+
+    public void update(final ProjectStackList projectStackList) {
+        this.projectStackList.update( projectStackList);
     }
 }
