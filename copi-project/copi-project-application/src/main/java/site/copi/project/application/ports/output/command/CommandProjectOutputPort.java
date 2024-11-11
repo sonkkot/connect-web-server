@@ -4,7 +4,7 @@ import site.copi.project.domain.aggregate.ProjectAggregate;
 import site.copi.project.domain.value.ProjectId;
 
 public interface CommandProjectOutputPort {
-    void remove(ProjectId projectId);
+    ProjectAggregate persist(ProjectAggregate projectAggregate);
 
-    <T> T persist(ProjectAggregate projectAggregate);
+    void remove(ProjectId projectId);
 }
