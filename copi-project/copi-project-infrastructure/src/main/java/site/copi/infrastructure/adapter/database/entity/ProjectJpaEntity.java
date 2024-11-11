@@ -19,7 +19,7 @@ import static lombok.AccessLevel.PROTECTED;
 @Entity
 @Table(name = "TB_PROJECT")
 @NoArgsConstructor(access = PROTECTED)
-public class ProjectJpaEntity extends ProjectBaseEntity {
+public class ProjectJpaEntity extends ProjectBaseJpaEntity {
     private static final String STACK_REGEX = ",";
 
     @Positive

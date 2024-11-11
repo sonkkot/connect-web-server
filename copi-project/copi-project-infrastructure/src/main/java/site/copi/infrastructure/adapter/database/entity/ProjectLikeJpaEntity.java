@@ -15,7 +15,7 @@ import static lombok.AccessLevel.PROTECTED;
 @Entity
 @Table(name = "TB_PROJECT")
 @NoArgsConstructor(access = PROTECTED)
-public class ProjectLikeJpaEntity {
+public class ProjectLikeJpaEntity extends ProjectBaseJpaEntity {
 
     @Positive
     @Id
