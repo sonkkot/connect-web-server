@@ -12,12 +12,12 @@ import site.copi.project.domain.policy.crud.PersistProjectPolicy;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class CreateProjectInputPort implements CreteProjectUseCase {
-    private final CommandProjectOutputPort commandProjectOutputPort;
+class CreateProjectInputPort implements CreteProjectUseCase {
     private final ValidProjectOutputPort validProjectOutputPort;
+    private final CommandProjectOutputPort commandProjectOutputPort;
 
     @Override
-    public <T> T create(ProjectAggregate projectAggregate) {
+    public ProjectAggregate create(ProjectAggregate projectAggregate) {
         return PersistProjectPolicy.execute(projectAggregate)
             .validAuthority(validProjectOutputPort::validAuthority)
             .persist(commandProjectOutputPort::persist);

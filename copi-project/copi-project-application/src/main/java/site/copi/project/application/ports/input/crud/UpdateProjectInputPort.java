@@ -7,6 +7,7 @@ import site.copi.project.application.ports.output.command.CommandProjectOutputPo
 import site.copi.project.application.ports.output.command.ValidProjectOutputPort;
 import site.copi.project.application.ports.output.query.QueryProjectOutputPort;
 import site.copi.project.application.usecase.crud.UpdateProjectUseCase;
+import site.copi.project.domain.aggregate.ProjectAggregate;
 import site.copi.project.domain.aggregate.ProjectUpdateAggregate;
 import site.copi.project.domain.policy.crud.UpdateProjectPolicy;
 import site.copi.project.domain.value.ProjectWriter;
@@ -14,13 +15,13 @@ import site.copi.project.domain.value.ProjectWriter;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class UpdateProjectInputPort implements UpdateProjectUseCase {
-    private final CommandProjectOutputPort commandProjectOutputPort;
+class UpdateProjectInputPort implements UpdateProjectUseCase {
     private final QueryProjectOutputPort queryProjectOutputPort;
     private final ValidProjectOutputPort validProjectOutputPort;
+    private final CommandProjectOutputPort commandProjectOutputPort;
 
     @Override
-    public <T> T update(ProjectUpdateAggregate projectUpdateAggregate, ProjectWriter actor) {
+    public ProjectAggregate update(ProjectUpdateAggregate projectUpdateAggregate, ProjectWriter actor) {
         return UpdateProjectPolicy.execute(projectUpdateAggregate)
             .load(queryProjectOutputPort::load)
             .validAuthority(writer -> validProjectOutputPort.validWriter(writer, actor))

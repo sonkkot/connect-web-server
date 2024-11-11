@@ -14,7 +14,7 @@ import site.copi.project.domain.value.ProjectWriter;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class DeleteProjectInputPort implements DeleteProjectUseCase {
+class DeleteProjectInputPort implements DeleteProjectUseCase {
     private final CommandProjectOutputPort commandProjectOutputPort;
     private final QueryProjectOutputPort queryProjectOutputPort;
     private final ValidProjectOutputPort validProjectOutputPort;
