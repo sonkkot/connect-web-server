@@ -1,0 +1,9 @@
+dependencies {
+    implementation 'org.springframework:spring-tx'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+}

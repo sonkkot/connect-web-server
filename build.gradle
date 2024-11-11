@@ -1,7 +1,21 @@
+import org.codehaus.groovy.runtime.GStringImpl
+
 plugins {
     id 'java'
     id 'org.springframework.boot' version '3.3.2'
     id 'io.spring.dependency-management' version '1.1.6'
+}
+
+ext {
+    APPLICATION_MODULE_NAME = "application"
+    WEB_MODULE_NAME = "web"
+    INFRASTRUCTURE_MODULE_NAME = "infrastructure"
+    DOMAIN_MODULE_NAME = "domain"
+
+    BASE_APPLICATION_GRADLE = "${rootDir}/gradle/config/base-application.gradle" as GStringImpl
+    BASE_INFRSTRUCTURE_GRADLE = "${rootDir}/gradle/config/base-infrastructure.gradle" as GStringImpl
+    BASE_WEB_GRADLE = "${rootDir}/gradle/config/base-web.gradle" as GStringImpl
+    BASE_DOMAIN_GRADLE = "${rootDir}/gradle/config/base-domain.gradle" as GStringImpl
 }
 
 configurations {
@@ -12,7 +26,7 @@ configurations {
 
 allprojects {
     group = 'site.copi'
-    version = 'V0.0.1'
+    version = '0.0.1'
 
     java {
         toolchain {
@@ -38,6 +52,22 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
+
+    if (project.name.contains(APPLICATION_MODULE_NAME)) {
+        apply from: BASE_APPLICATION_GRADLE
+    }
+
+    if (project.name.contains(WEB_MODULE_NAME)) {
+        apply from: BASE_WEB_GRADLE
+    }
+
+    if (project.name.contains(INFRASTRUCTURE_MODULE_NAME)) {
+        apply from: BASE_INFRSTRUCTURE_GRADLE
+    }
+
+    if (project.name.contains(DOMAIN_MODULE_NAME)) {
+        apply from: BASE_DOMAIN_GRADLE
+    }
 }
 
 tasks.named('test') {
