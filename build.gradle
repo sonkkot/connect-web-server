@@ -40,8 +40,6 @@ allprojects {
 }
 
 dependencies {
-    implementation project(':copi-core-security')
-
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
