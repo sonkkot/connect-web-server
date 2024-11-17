@@ -1,10 +1,11 @@
-package site.copi.infrastructure.adapter.database.entity;
+package site.copi.project.infrastructure.adapter.database.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Positive;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import site.copi.common.infrastructure.database.entity.CopiBaseJpaEntity;
 import site.copi.project.domain.value.ProjectId;
 import site.copi.project.domain.value.ProjectWriter;
 
@@ -15,7 +16,7 @@ import static lombok.AccessLevel.PROTECTED;
 @Entity
 @Table(name = "TB_PROJECT")
 @NoArgsConstructor(access = PROTECTED)
-public class ProjectLikeJpaEntity extends ProjectBaseJpaEntity {
+public class ProjectLikeJpaEntity extends CopiBaseJpaEntity {
 
     @Positive
     @Id

@@ -1,0 +1,6 @@
+dependencies {
+    implementation project(':copi-common:copi-common-infrastructure')
+
+    implementation project(':copi-project:copi-project-domain')
+    implementation project(':copi-project:copi-project-application')
+}

@@ -1,7 +1,7 @@
-package site.copi.infrastructure.adapter.database.mapper;
+package site.copi.project.infrastructure.adapter.database.mapper;
 
 import org.springframework.stereotype.Service;
-import site.copi.infrastructure.adapter.database.entity.ProjectJpaEntity;
+import site.copi.project.infrastructure.adapter.database.entity.ProjectJpaEntity;
 import site.copi.project.domain.aggregate.ProjectAggregate;
 
 @Service

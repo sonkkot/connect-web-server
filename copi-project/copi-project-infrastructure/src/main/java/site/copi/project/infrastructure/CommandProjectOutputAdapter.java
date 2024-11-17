@@ -1,10 +1,10 @@
-package site.copi.infrastructure;
+package site.copi.project.infrastructure;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import site.copi.infrastructure.adapter.database.mapper.ProjectJpaMapper;
-import site.copi.infrastructure.adapter.database.repository.ProjectJpaRepository;
+import site.copi.project.infrastructure.adapter.database.mapper.ProjectJpaMapper;
+import site.copi.project.infrastructure.adapter.database.repository.ProjectJpaRepository;
 import site.copi.project.application.ports.output.command.CommandProjectOutputPort;
 import site.copi.project.domain.aggregate.ProjectAggregate;
 import site.copi.project.domain.value.ProjectId;

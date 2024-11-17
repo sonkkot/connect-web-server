@@ -1,4 +1,4 @@
-package site.copi.infrastructure.adapter.database.repository;
+package site.copi.project.infrastructure.adapter.database.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.lang.NonNull;
 import org.springframework.transaction.annotation.Transactional;
-import site.copi.infrastructure.adapter.database.entity.ProjectJpaEntity;
+import site.copi.project.infrastructure.adapter.database.entity.ProjectJpaEntity;
 
 public interface ProjectJpaRepository extends JpaRepository<ProjectJpaEntity, Long> {
 

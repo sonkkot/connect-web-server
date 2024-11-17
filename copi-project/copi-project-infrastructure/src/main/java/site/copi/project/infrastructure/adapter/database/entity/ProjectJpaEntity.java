@@ -1,4 +1,4 @@
-package site.copi.infrastructure.adapter.database.entity;
+package site.copi.project.infrastructure.adapter.database.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -7,6 +7,7 @@ import jakarta.validation.constraints.PositiveOrZero;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import site.copi.common.infrastructure.database.entity.CopiBaseJpaEntity;
 import site.copi.project.domain.value.*;
 
 import java.util.Arrays;
@@ -19,7 +20,7 @@ import static lombok.AccessLevel.PROTECTED;
 @Entity
 @Table(name = "TB_PROJECT")
 @NoArgsConstructor(access = PROTECTED)
-public class ProjectJpaEntity extends ProjectBaseJpaEntity {
+public class ProjectJpaEntity extends CopiBaseJpaEntity {
     private static final String STACK_REGEX = ",";
 
     @Positive
