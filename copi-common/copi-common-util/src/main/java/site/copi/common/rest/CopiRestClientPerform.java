@@ -39,6 +39,15 @@ public class CopiRestClientPerform {
             .body(responseType);
     }
 
+    public <R> R retrieve(final Class<R> responseType) {
+        return bodySpec
+            .contentType(APPLICATION_JSON)
+            .retrieve()
+            .onStatus(HttpStatusCode::is4xxClientError, clientErrorHandle())
+            .onStatus(HttpStatusCode::is5xxServerError, serverErrorHandle())
+            .body(responseType);
+    }
+
     private RestClient.ResponseSpec.ErrorHandler clientErrorHandle() {
         return (request, response) -> {
             log.warn("[   CopiRestClientPerform   ] ⏬️ 🟠 4xxClientError.Request Method: {}, URI: {}",
