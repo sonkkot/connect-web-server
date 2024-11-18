@@ -1,6 +1,7 @@
 package site.copi.common.rest;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.web.client.RestClient;
 
@@ -40,6 +41,15 @@ public class CopiRestClientPerform {
     }
 
     public <R> R retrieve(final Class<R> responseType) {
+        return bodySpec
+            .contentType(APPLICATION_JSON)
+            .retrieve()
+            .onStatus(HttpStatusCode::is4xxClientError, clientErrorHandle())
+            .onStatus(HttpStatusCode::is5xxServerError, serverErrorHandle())
+            .body(responseType);
+    }
+
+    public <R> R retrieve(final ParameterizedTypeReference<R> responseType) {
         return bodySpec
             .contentType(APPLICATION_JSON)
             .retrieve()
