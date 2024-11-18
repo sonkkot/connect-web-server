@@ -45,7 +45,7 @@ public class ProjectJpaEntity extends CopiBaseJpaEntity {
     @Column(nullable = false)
     private int viewCount;
 
-    @Builder
+    @Builder(builderMethodName = "basicBuilder")
     public ProjectJpaEntity(Long id, Long writer, String title, String content, ProjectStackList stackList, int viewCount) {
         this.id = id;
         this.writer = writer;
@@ -56,13 +56,13 @@ public class ProjectJpaEntity extends CopiBaseJpaEntity {
     }
 
     @Builder(builderMethodName = "aggregateBuilder")
-    public ProjectJpaEntity(ProjectId id, ProjectWriter writer, ProjectTitle title, ProjectContent content, ProjectStackList stackList, ProjectViewCount viewCount) {
-        this.id = id == null ? null : id.id();
-        this.writer = writer.id();
-        this.title = title.title();
-        this.content = content.content();
-        this.stackList = convert(stackList);
-        this.viewCount = viewCount.count();
+    public ProjectJpaEntity(ProjectId projectId, ProjectWriter projectWriter, ProjectTitle projectTitle, ProjectContent projectContent, ProjectStackList projectStackList, ProjectViewCount projectViewCount) {
+        this.id = projectId == null ? null : projectId.id();
+        this.writer = projectWriter.id();
+        this.title = projectTitle.title();
+        this.content = projectContent.content();
+        this.stackList = convert(projectStackList);
+        this.viewCount = projectViewCount.count();
     }
 
     private static String convert(ProjectStackList stackList) {
