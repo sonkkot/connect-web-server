@@ -6,6 +6,7 @@ import org.springframework.web.client.RestClient;
 import java.net.URI;
 
 public class CopiRestClient {
+    private static final RestClient REST_CLIENT = RestClient.create();
     private final RestClient.RequestBodySpec restClient;
 
     private CopiRestClient(RestClient.RequestBodySpec restClient) {
@@ -24,7 +25,7 @@ public class CopiRestClient {
 
     private static CopiRestClient createRestClient(final HttpMethod method, final URI uri) {
         return new CopiRestClient(
-            RestClient.create()
+            REST_CLIENT
                 .method(method)
                 .uri(uri)
         );
