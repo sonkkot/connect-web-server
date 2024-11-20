@@ -8,6 +8,7 @@ import site.copi.users.infrastructure.model.UserModel;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import static site.copi.users.infrastructure.adapter.database.UserJpaEntity.LANGUAGE_REGEX;
 import static site.copi.users.infrastructure.adapter.database.UserJpaEntity.UserRole.valueOf;
 
 @Service
@@ -63,6 +64,6 @@ class UserModelMapper {
             .list()
             .stream()
             .map(function)
-            .collect(Collectors.joining(UserJpaEntity.LANGUAGE_REGEX));
+            .collect(Collectors.joining(LANGUAGE_REGEX));
     }
 }
