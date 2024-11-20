@@ -2,12 +2,12 @@ package site.copi.users.infrastructure.adapter.database;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import site.copi.users.infrastructure.UserOutputPort;
+import site.copi.users.infrastructure.UserRepositoryPort;
 import site.copi.users.infrastructure.model.UserModel;
 
 @Service
 @RequiredArgsConstructor
-class UserOutputService implements UserOutputPort {
+class UserOutputService implements UserRepositoryPort {
     private final UserJpaRepository userJpaRepository;
     private final UserModelMapper userModelMapper;
 
