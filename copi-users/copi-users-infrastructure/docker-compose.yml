@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: copi-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: lkdcode
+      MYSQL_DATABASE: copi
+      MYSQL_USER: lkdcode
+      MYSQL_PASSWORD: lkdcode
