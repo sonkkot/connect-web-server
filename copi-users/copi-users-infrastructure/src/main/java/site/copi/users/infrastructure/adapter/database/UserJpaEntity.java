@@ -62,6 +62,7 @@ class UserJpaEntity extends CopiBaseJpaEntity {
     private String languagePoints;
     @NotNull
     @Enumerated(STRING)
+    @Column(nullable = false)
     private UserRole role;
 
     public static UserJpaEntity init() {
