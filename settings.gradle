@@ -1,6 +1,4 @@
 rootProject.name = 'copi-web-server'
-include 'copi-core-security'
-include 'copi-web-boot'
 
 include 'copi-project'
 
@@ -10,3 +8,19 @@ include 'copi-project:copi-project-infrastructure'
 include 'copi-project:copi-project-web'
 
 include 'copi-server-presentation'
+
+include 'copi-web-boot'
+
+include 'copi-web-security'
+
+include 'copi-users'
+include 'copi-users:copi-users-domain'
+include 'copi-users:copi-users-application'
+include 'copi-users:copi-users-infrastructure'
+include 'copi-users:copi-users-web'
+include 'copi-common'
+include 'copi-common:copi-common-infrastructure'
+findProject(':copi-common:copi-common-infrastructure')?.name = 'copi-common-infrastructure'
+include 'copi-common:copi-common-util'
+findProject(':copi-common:copi-common-util')?.name = 'copi-common-util'
+
